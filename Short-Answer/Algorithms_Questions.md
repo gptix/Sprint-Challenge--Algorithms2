@@ -74,7 +74,4 @@ If it does not break, reset safest floor as current tested floor, and, if low !=
 
 If it does break, DO NOT reset max_safe_so_far, and, if low != high, recurse from low to current.
 
-
-
-
-    
+I'd do detailed testingon lists of size 1, 2, 3, 4, 100
