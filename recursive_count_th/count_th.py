@@ -5,6 +5,13 @@ Your function must utilize recursion. It cannot contain any loops.
 '''
 def count_th(word):
     
-    # TBC
+    # Edge case
+    if len(word) <= 1:
+        return 0
     
-    pass
+    # Found one, find more
+    if word[:2] = 'th':
+        return 1 + count_th(word[2:])
+    
+    # first two do not match, move right one
+    return count_th(word[1:])
