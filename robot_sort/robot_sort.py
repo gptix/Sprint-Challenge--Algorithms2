@@ -96,8 +96,34 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+        
+    
+        if self.can_move_right():
+            self.set_light_off()
+            self.swap_item()
+
+            while self.can_move_right():
+                print(f'current item is {self._item}')
+
+                self.move_right()
+                if self.compare_item() == 1:
+                    print('I should switch')
+                    self.set_light_on()
+                    print(self.light_is_on())
+
+                    self.swap_item()
+                    print(f'current item is {self._item}')
+                    input()
+
+                self.move_left()
+                self.swap_item()
+                self.move_right()
+                self.swap_item()
+
+
+            self.swap_item()    
+            if self.light_is_on():
+                self.sort()
 
 
 if __name__ == "__main__":
