@@ -10,7 +10,7 @@ def count_th(word):
         return 0
     
     # Found one, find more
-    if word[:2] = 'th':
+    if word[:2] == 'th':
         return 1 + count_th(word[2:])
     
     # first two do not match, move right one
